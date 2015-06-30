@@ -1,6 +1,7 @@
 {
   "run_list": [
-    "recipe[hello]"
+    "recipe[hello]",
+    "recipe[common]"
   ],
   "automatic": {
     "ipaddress": "localhost"
