@@ -6,3 +6,10 @@
   end
 end
 
+template "/etc/profile.d/chef-ruby.sh" do
+  source "chef-ruby.sh.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
+
