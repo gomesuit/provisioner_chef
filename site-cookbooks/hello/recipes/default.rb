@@ -1,5 +1,5 @@
 # 「Hello Chef」と表示する
-log "Hello Chef"
+#log "Hello Chef"
 
 # zshをインストールする
 package "zsh" do

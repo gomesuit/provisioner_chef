@@ -13,3 +13,13 @@ template "/etc/profile.d/chef-ruby.sh" do
   mode 0644
 end
 
+gem_package "bundler" do
+  gem_binary("/opt/chef/embedded/bin/gem")
+  options("--prerelease --no-format-executable")
+end
+
+execute 'bundle install' do
+  cwd '/home/vagrant/provisioner_chef'
+  not_if 'bundle check' # This is not run
+end
+
