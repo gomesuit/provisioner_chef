@@ -23,3 +23,11 @@ execute 'bundle install' do
   not_if 'bundle check' # This is not run
 end
 
+package "docker-io" do
+  action :install
+end
+
+package "device-mapper-libs.i686" do
+  action :install
+end
+
